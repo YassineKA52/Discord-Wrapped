@@ -4,9 +4,9 @@ A Discord bot that tracks server activity and generates monthly recaps — like 
 
 ## Features (in progress)
 
-- [ ] Monthly leaderboard (messages, words sent)
-- [ ] Most used words per user and server-wide
-- [ ] Voice channel time tracking
+- [x] Monthly leaderboard (messages, words sent)
+- [x] Most used words per user and server-wide
+- [x] Voice channel time tracking
 - [ ] Most active days and hours
 - [ ] Auto-post recap on the 1st of each month
 - [ ] Moderation tools (ban, kick, warn, mute)
