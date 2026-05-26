@@ -65,7 +65,7 @@ cp .env.example .env
 
 ### 5. Run the bot
 ```bash
-python bot/main.py
+python -m bot.main
 ```
 
 ## Getting a Discord Bot Token
