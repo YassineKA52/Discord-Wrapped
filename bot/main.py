@@ -2,19 +2,8 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 from database.db import init_db
-from fastapi import FastAPI
-from api.routes import stats, recap
 import asyncio
 import os
-
-app = FastAPI(title="Discord Wrapped API")
-
-app.include_router(stats.router, prefix="/stats", tags=["Stats"])
-app.include_router(recap.router, prefix="/recap", tags=["Recap"])
-
-@app.get("/")
-async def root():
-    return {"status": "online", "message": "Discord Wrapped API is running"}
 
 load_dotenv()
 
@@ -38,6 +27,7 @@ async def ping(ctx):
 async def main():
     async with bot:
         await bot.load_extension("bot.cogs.tracker")
+        await bot.load_extension("bot.cogs.recap")
         await bot.start(os.getenv("DISCORD_TOKEN"))
 
 asyncio.run(main())
