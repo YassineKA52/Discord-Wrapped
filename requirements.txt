@@ -10,3 +10,6 @@ aiosqlite==0.20.0
 
 # Utilities
 python-dotenv==1.0.1
+
+# AI
+anthropic==0.39.0
